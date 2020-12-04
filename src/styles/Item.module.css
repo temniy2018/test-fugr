@@ -1,0 +1,28 @@
+.root {
+    max-width: 600px;
+    margin: 15px 10px 0;
+}
+
+.root__header {
+    color: rgb(67, 39, 190);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.root__defaultMainText {
+    color: rgb(67, 39, 190);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.weighty {
+    font-weight: 700;
+}
+
+.grey {
+    color: #333;
+}

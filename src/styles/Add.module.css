@@ -1,0 +1,97 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.root__isAddButton {
+    outline: 0;
+    border: 2px solid #777;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: white;
+    color: #777;
+    transition-duration: .5s;
+    animation: moveToBottom .3s ;
+    margin: 15px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.root__isAddButton:hover, .root__isAddButton:active {
+    border: 2px solid rgb(67, 39, 190);
+    color: rgb(67, 39, 190);
+}
+
+@keyframes moveToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.root_inputRoot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.root_inputRoot_inputDiv {
+    margin: 0px 10px;
+}
+
+.root_inputRoot_inputDiv__header {
+    color: rgb(67, 39, 190);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.root_inputRoot_inputDiv__input {
+    outline: none;
+    border: 2px solid rgb(67, 39, 190);
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.root__add {
+    outline: 0;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: rgb(67, 39, 190);
+    color: white;
+    transition-duration: .5s;
+    animation: moveToTop .3s ;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+}
+
+.root__add:hover, .root__add:active {
+    border: 2px solid #333;
+    color: #333;
+    background-color: white;
+}
+
+.root__warning {
+    color: rgb(216, 15, 65);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    margin: 5px 0 10px;
+}

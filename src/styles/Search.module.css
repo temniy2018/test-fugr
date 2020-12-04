@@ -1,0 +1,36 @@
+.root {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+}
+
+.root__input {
+    outline: none;
+    border: 2px solid rgb(67, 39, 190);
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.root__button {
+    outline: 0;
+    border: 2px solid #777;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 3.5px 10px;
+    background-color: white;
+    color: #777;
+    transition-duration: .5s;
+    animation: moveToTop .3s ;
+    margin: 0 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.root__button:hover, .root__button:active {
+    border: 2px solid rgb(67, 39, 190);
+    color: rgb(67, 39, 190);
+}

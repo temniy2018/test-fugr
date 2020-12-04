@@ -1,0 +1,78 @@
+.chooseDataRoot {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chooseDataRoot__header {
+    color: rgb(67, 39, 190);
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    animation: moveToBottom .3s;
+    text-align: center;
+}
+
+.chooseDataRoot_buttons {
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.chooseDataRoot_buttons__button {
+    outline: 0;
+    border: 2px solid #777;
+    border-radius: 3px;
+    font-size: 24px;
+    padding: 5px 10px;
+    background-color: white;
+    color: #777;
+    transition-duration: .5s;
+    animation: moveToTop .3s ;
+    font-family: 'Roboto', sans-serif;
+}
+
+.chooseDataRoot_buttons__button:hover, .chooseDataRoot_buttons__button:active {
+    border: 2px solid rgb(67, 39, 190);
+    color: rgb(67, 39, 190);
+}
+
+@keyframes moveToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+@media(max-width: 599px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: inline-block;
+    }
+}

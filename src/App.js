@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import s from "./App.module.css";
+import Table from "./components/Table";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: "none",
+    };
+  }
+
+  render() {
+    if (this.state.data === "none") {
+      return (
+        <div className={s.chooseDataRoot}>
+          <div className={s.desktop}>
+            <p className={s.chooseDataRoot__header}>Выберите набор данных</p>
+            <div className={s.chooseDataRoot_buttons}>
+              <button
+                className={s.chooseDataRoot_buttons__button}
+                onClick={() => {
+                  this.setState({ data: "small" });
+                }}
+              >
+                Маленький
+              </button>
+              <button
+                className={s.chooseDataRoot_buttons__button}
+                onClick={() => {
+                  this.setState({ data: "big" });
+                }}
+              >
+                Большой
+              </button>
+            </div>
+          </div>
+          <p className={`${s.chooseDataRoot__header} ${s.mobile}`}>Пожалуйста, переверните телефон</p>
+        </div>
+      );
+    }
+    return <Table data={this.state.data} />;
+  }
 }
 
 export default App;
